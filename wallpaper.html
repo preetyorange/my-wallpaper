@@ -2,54 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Video Wallpaper with Text</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mars</title>
   <style>
-    html, body {
+    
+    @font-face {
+      font-family: "GreaterTheory";
+      src: url("GreaterTheory.otf") format("opentype");
+    }
+
+    body, html {
       margin: 0;
       padding: 0;
       height: 100%;
-      width: 100%;
       overflow: hidden;
     }
 
-   
-    @font-face {
-      font-family: 'Greater Theory';
-      src: url('GreaterTheory.otf') format('opentype');
-    }
-
+  
     video {
       position: fixed;
       top: 0;
       left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      z-index: -1; 
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      z-index: -1;
     }
 
-    .text {
+    
+    .centered-text {
       position: absolute;
-      top: 50%;
+      top: 8%; 
       left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: 'Greater Theory', sans-serif;
-      font-size: 70px;
+      transform: translateX(-50%);
+      font-family: "GreaterTheory", sans-serif;
+      font-size: 6vw;
       font-weight: bold;
       color: white;
       text-align: center;
-      z-index: 1;
+      white-space: nowrap;
     }
   </style>
 </head>
 <body>
-
   <video autoplay muted loop playsinline>
     <source src="mars.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-
-  <div class="text">I AM THE GREATEST</div>
+  <div class="centered-text">I AM THE GREATEST</div>
 </body>
 </html>
